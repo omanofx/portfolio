@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript" src="/../../../plugins/pdfmake/pdfmake.min.js"></script>
+<script type="text/javascript" src="/../../../plugins/pdfmake/vfs_fonts.js"></script>
+<script type="text/javascript" src="/../../../plugins/pdfmake/html2canvas.min.js"></script>
+
+<script type="text/javascript">
+    function pdfdownload (NomArchivo)
+    {
+        //alert("111");
+        html2canvas(document.body, {
+            onrendered: function (canvas) {
+                var data = canvas.toDataURL();
+                var docDefinition = {
+                    content: [{
+                        image: data,
+                        width: 500,
+                    }]
+                };
+                pdfMake.createPdf(docDefinition).download(NomArchivo);
+            }
+        });
+        //cerrar();
+    }
+    /*
+    function cerrar() {
+        setTimeout(function(){
+            window.close();
+        },1000); //Dejara un tiempo de 1 seg para que el usuario vea que se envio el formulario correctamente
+
+    }
+    */
+
+</script>
+</head>
+<body>
+<style type="text/css">
+  td{
+      font-family: Calibri, Arial, "Helvetica Neue", Helvetica,  sans-serif;
+      font-size:12pt;
+      color:#000;
+      font-weight:normal;
+      text-align:center;
+    }
+    
+    td.titulo1, h1{
+      font-size:26pt;
+      border:none;
+      font-weight:bold;
+    }
+    h1{ color:#0695d6; }
+    td.titulo1{ background-color:#0695d6; color:#fff; }
+    
+    td.titulo2, h2{
+      font-size:15pt;
+      border:none;
+      color:#0695d6;
+      font-weight:bold;
+    }
+
+    td.encabezado, th.CT1{
+      font-weight:bold;
+      background-color:#5bc0de;
+      color:#fff;
+    }
+    
+    table.datos,  th,  td {
+      border: 0.5pt solid #ccc;
+      border-collapse: collapse;   
+      position: relative;
+    }
+    
+    td.zebra, td.CDRB, tr.CDRB td{
+      background-color:#eee;
+    }
+
+    td.total, tr.CT2 td{
+      font-weight:bold;
+      background-color:#ccc;
+      color:#000;   
+    } 
+
+    td.total, tr.CT3 td{
+      text-align: left;
+      border: none;
+    }     
+      
+    .left{
+      text-align: left;
+    }
+    
+    .right{
+      text-align: right;
+    }
+</style>
+<h1>Datos Operativos de Gas Natural: Licenciatarias de Transporte</h1><h2>Gas Entregado por Transportistas</h2><h4>II.02.01</b> - A Distribuidoras<b><sup>/1</sup></b> - En miles de m<sup>3</sup> de 9300 kcal</font><br><b>Año</b>:  2010</h4><br>
+			<table border=0 width="100%" cellspacing=0 cellpadding="1"><THEAD>
+<TR>
+ <TH class="CT1">Mes</TH>
+ <TH class="CT1">Metrogas</TH>
+ <TH class="CT1">Naturgy BAN S.A.</TH>
+ <TH class="CT1">Centro</TH>
+ <TH class="CT1">Cuyana</TH>
+ <TH class="CT1">Litoral</TH>
+ <TH class="CT1">Gasnea</TH>
+ <TH class="CT1">Gasnor</TH>
+ <TH class="CT1">Cammuzzi <BR> Pampeana</TH>
+ <TH class="CT1">Cammuzzi <BR> Sur</TH>
+ <TH class="CT1">Total</TH>
+</TR>
+</THEAD>
+<TBODY>
+<TR class="CDR"> <!-- Datos Operativos -->
+<TD class="CDL">Ene/2010</TD><TD class="CDR">621701</TD>
+<TD class="CDR">242756</TD>
+<TD class="CDR">116006</TD>
+<TD class="CDR">107739</TD>
+<TD class="CDR">206389</TD>
+<TD class="CDR">14816</TD>
+<TD class="CDR">117353</TD>
+<TD class="CDR">250448</TD>
+<TD class="CDR">110750</TD>
+<TD class="CDR">1787957</TD>
+</TR>
+
+<TR class="CDRB"> <!-- Datos Operativos -->
+<TD class="CDL">Feb</TD><TD class="CDRB">566288</TD>
+<TD class="CDRB">261673</TD>
+<TD class="CDRB">101583</TD>
+<TD class="CDRB">108135</TD>
+<TD class="CDRB">199550</TD>
+<TD class="CDRB">13960</TD>
+<TD class="CDRB">106180</TD>
+<TD class="CDRB">245859</TD>
+<TD class="CDRB">107644</TD>
+<TD class="CDRB">1710872</TD>
+</TR>
+
+<TR class="CDR"> <!-- Datos Operativos -->
+<TD class="CDL">Mar</TD><TD class="CDR">567979</TD>
+<TD class="CDR">248606</TD>
+<TD class="CDR">108433</TD>
+<TD class="CDR">123773</TD>
+<TD class="CDR">204672</TD>
+<TD class="CDR">17339</TD>
+<TD class="CDR">111090</TD>
+<TD class="CDR">247232</TD>
+<TD class="CDR">155846</TD>
+<TD class="CDR">1784971</TD>
+</TR>
+
+<TR class="CDRB"> <!-- Datos Operativos -->
+<TD class="CDL">Abr</TD><TD class="CDRB">443794</TD>
+<TD class="CDRB">308183</TD>
+<TD class="CDRB">110560</TD>
+<TD class="CDRB">131254</TD>
+<TD class="CDRB">256481</TD>
+<TD class="CDRB">17073</TD>
+<TD class="CDRB">105130</TD>
+<TD class="CDRB">255755</TD>
+<TD class="CDRB">210524</TD>
+<TD class="CDRB">1838754</TD>
+</TR>
+
+<TR class="CDR"> <!-- Datos Operativos -->
+<TD class="CDL">May</TD><TD class="CDR">473271</TD>
+<TD class="CDR">386830</TD>
+<TD class="CDR">166104</TD>
+<TD class="CDR">154757</TD>
+<TD class="CDR">280090</TD>
+<TD class="CDR">21810</TD>
+<TD class="CDR">127395</TD>
+<TD class="CDR">335848</TD>
+<TD class="CDR">298676</TD>
+<TD class="CDR">2244781</TD>
+</TR>
+
+<TR class="CDRB"> <!-- Datos Operativos -->
+<TD class="CDL">Jun</TD><TD class="CDRB">441855</TD>
+<TD class="CDRB">405967</TD>
+<TD class="CDRB">207835</TD>
+<TD class="CDRB">182721</TD>
+<TD class="CDRB">259739</TD>
+<TD class="CDRB">27769</TD>
+<TD class="CDRB">141421</TD>
+<TD class="CDRB">369370</TD>
+<TD class="CDRB">305227</TD>
+<TD class="CDRB">2341904</TD>
+</TR>
+
+<TR class="CDR"> <!-- Datos Operativos -->
+<TD class="CDL">Jul</TD><TD class="CDR">526769</TD>
+<TD class="CDR">395174</TD>
+<TD class="CDR">231803</TD>
+<TD class="CDR">192531</TD>
+<TD class="CDR">242265</TD>
+<TD class="CDR">27185</TD>
+<TD class="CDR">134824</TD>
+<TD class="CDR">392839</TD>
+<TD class="CDR">353995</TD>
+<TD class="CDR">2497385</TD>
+</TR>
+
+<TR class="CDRB"> <!-- Datos Operativos -->
+<TD class="CDL">Ago</TD><TD class="CDRB">557256</TD>
+<TD class="CDRB">392375</TD>
+<TD class="CDRB">219798</TD>
+<TD class="CDRB">173910</TD>
+<TD class="CDRB">301086</TD>
+<TD class="CDRB">26748</TD>
+<TD class="CDRB">137144</TD>
+<TD class="CDRB">371300</TD>
+<TD class="CDRB">323461</TD>
+<TD class="CDRB">2503078</TD>
+</TR>
+
+<TR class="CDR"> <!-- Datos Operativos -->
+<TD class="CDL">Sep</TD><TD class="CDR">512881</TD>
+<TD class="CDR">411934</TD>
+<TD class="CDR">179130</TD>
+<TD class="CDR">146058</TD>
+<TD class="CDR">305744</TD>
+<TD class="CDR">22216</TD>
+<TD class="CDR">125933</TD>
+<TD class="CDR">339514</TD>
+<TD class="CDR">240316</TD>
+<TD class="CDR">2283726</TD>
+</TR>
+
+<TR class="CDRB"> <!-- Datos Operativos -->
+<TD class="CDL">Oct</TD><TD class="CDRB">546869</TD>
+<TD class="CDRB">307389</TD>
+<TD class="CDRB">149758</TD>
+<TD class="CDRB">123912</TD>
+<TD class="CDRB">271208</TD>
+<TD class="CDRB">19495</TD>
+<TD class="CDRB">106353</TD>
+<TD class="CDRB">296676</TD>
+<TD class="CDRB">183976</TD>
+<TD class="CDRB">2005637</TD>
+</TR>
+
+<TR class="CDR"> <!-- Datos Operativos -->
+<TD class="CDL">Nov</TD><TD class="CDR">602694</TD>
+<TD class="CDR">266365</TD>
+<TD class="CDR">142365</TD>
+<TD class="CDR">107248</TD>
+<TD class="CDR">245234</TD>
+<TD class="CDR">18206</TD>
+<TD class="CDR">97171</TD>
+<TD class="CDR">266661</TD>
+<TD class="CDR">150707</TD>
+<TD class="CDR">1896651</TD>
+</TR>
+
+<TR class="CDRB"> <!-- Datos Operativos -->
+<TD class="CDL">Dic</TD><TD class="CDRB">629876</TD>
+<TD class="CDRB">240351</TD>
+<TD class="CDRB">161379</TD>
+<TD class="CDRB">108256</TD>
+<TD class="CDRB">225247</TD>
+<TD class="CDRB">15390</TD>
+<TD class="CDRB">129901</TD>
+<TD class="CDRB">273359</TD>
+<TD class="CDRB">134493</TD>
+<TD class="CDRB">1918252</TD>
+</TR>
+
+
+<TR class="CT2">
+ <TD>Total</TD>
+ <TD>6491232</TD>
+ <TD>3867604</TD>
+ <TD>1894755</TD>
+ <TD>1660294</TD>
+ <TD>2997705</TD>
+  <TD>242006</TD>
+<TD>1439895</TD>
+ <TD>3644859</TD>
+ <TD>2575616</TD>
+ <TD>24813967</TD>
+</TR>
+ 
+<TR class="CT3">
+	<TD colspan=10>
+
+		<p><font face="Verdana" color="#000000" size="1"><br><sup>/1</sup> Incluye gas de inventario. No incluye gas entregado por gasoductos propios de Cuyana y Sur. (Ver Cuadro II.01)</font></p>		<!--si hay Referencias ponerlas a continuacion de este comentario-->
+		<!--fin de las Referencias-->
+		<p><font face="Verdana" color="#000000" size="1">FUENTE: ENARGAS, en base a datos de las Licenciatarias de Transporte</font></p>	</TD>	
+</TR>
+
+</TBODY> 
+</body>
+</html>
